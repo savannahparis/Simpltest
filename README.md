@@ -10,5 +10,11 @@ Changer dans le fichier de configuration les informations suivantes :
 - Url
 - Mot de passe de la base de données
 
+Utilisateur de connexion :
+- Login : samsung@gmail.com
+- mot de passe : valise74
+
+
+
 
 
