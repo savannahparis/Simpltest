@@ -35,10 +35,10 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="" placeholder="Mot de passe (*)" name="password" tabindex="3">
+                    <input type="hidden" class="form-control form-control-user" id="" placeholder="Mot de passe (*)" name="password" value="@php echo '123456' @endphp" tabindex="3">
                   </div>
                   <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="" placeholder="Confirmer saisie mot de passe (*)" name="passwordb" tabindex="4">
+                    <input type="hidden" class="form-control form-control-user" id="" placeholder="Confirmer saisie mot de passe (*)" name="passwordb" value="@php echo '123456' @endphp" tabindex="4">
                   </div>
                   </div>
                   
