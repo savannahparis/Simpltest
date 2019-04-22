@@ -101,7 +101,7 @@ class GestionController extends Controller
             // The user is logged in...
             
             // liste users - ordinateurs
-            $u = User::where('profil', '=', 'user')->get();
+            $u = User::where('profil', '=', 'user')->orderBy('id', 'desc')->get();
             $o = Ordinateur::all('id', 'nom');
             $h = ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
             
