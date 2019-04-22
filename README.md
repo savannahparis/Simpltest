@@ -3,3 +3,5 @@ Application test
 
 Application test pour SIMPLON
 
+Application non fonctionnel sans installation de Laravel 5.8 et PHP 7.1 minimum.
+
