@@ -54,18 +54,10 @@
                                 </tr>
                               </tfoot>
                               <tbody>
-                              	<tr>
-                              		<td>0</td>
-                              		<td>nom user</td>
-                              		<td>nom ordinateur</td>
-                              		<td>date</td>
-                              		<td>début</td>
-                              		<td>fin</td>
-                              		<td><a href="" title="SUPPRIMER" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a></td>
-                              	</tr>
+                              	
                               	@foreach($attributions as $attribution)
                               	<tr>
-                              		<td></td>
+                              		<td>n° {{$attribution->id}}</td>
                               		<td>{{$attribution->login}}</td>
                               		<td> {{$attribution->nom}}</td>
                               		<td>{{$attribution->date}}</td>
