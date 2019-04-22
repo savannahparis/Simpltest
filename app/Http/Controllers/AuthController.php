@@ -27,44 +27,6 @@ class AuthController extends Controller
     }
     
     
-    
-    /**
-     * affiche le formulaire ou renvoi les messages erreurs.
-     * 
-     * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
-     */
-    public function getRegister()
-    {
-        
-        return view('layouts.auth.inscription', ['message' => '']);
-    }
-    
-    /**
-     * validation du formulaire via service RegisterRequest
-     */
-    public function postRegister(RegisterRequest $request)
-    {
-        //dd($request);  
-        
-        $user = new User();
-        $user->login = $request->login;
-        $user->email = $request->email;
-        
-        if($request->password === $request->passwordb):
-            $user->password = hash_hmac('md5', $request->passwordb, $this->_mySel);
-        endif;
-        
-        $user->profil = $request->profil;
-
-        //dd($user);
-        $user->save();
-
-        // redirection
-        $message = 'Un nouveau compte vient d\être ajouté !!';
-        return redirect()->route('accueil')->with('message', $message);
-    }
-    
-    
     public function postLogin(LoginRequest $request)
     {
 
@@ -81,7 +43,7 @@ class AuthController extends Controller
                 Auth::login($user, true);
                 
                 return redirect()->route('dashboard')->with('user', $user);
-                //return view('layouts.gestion.index', ['user' => $user]);
+
             } else {
                 // error message
                 return view('layouts.home.index', ['message' => ''])->withErrors('Je crois que vous n\'avez pas le droit d\'être là....');
@@ -92,8 +54,6 @@ class AuthController extends Controller
             return view('layouts.home.index', ['message' => ''])->withErrors('Erreur dans votre login ou mot de passe');
         }
 
-        //return redirect()->route('home');
-        
        
     }
 }
